@@ -1,0 +1,39 @@
+ <h1 align="center">List Of Products</h1>
+ <table border="2" align="center">
+     
+    <tr>
+        <th>Product_ID</th>
+        <th>Product_Name</th>
+        <th>Product_Price</th>
+        <th>Product_Edit</th>
+        <th>Product_Delete</th>
+    </tr>
+    <tr *ngFor="let prod of cs.productarr">
+        <td>{{prod.productId}}</td>
+        <td>{{prod.productName}}</td>
+        <td>{{prod.productPrice}}</td>
+        <td><button (click)="editproduct(prod)">EDIT</button></td>
+        <td><button (click)="deleteproduct(prod.productId)">DELETE</button></td>
+    </tr>
+
+ </table>
+ <h2 align="center">EDIT Product Information</h2>
+<form [formGroup]="updateform" (ngSubmit)="updateproduct()" class="form-group" align="center">
+    <!-- <div><label>Product ID</label></div>
+    <div><input type="text" formControlName="productId"></div> -->
+    <div><label>Product Name</label></div>
+    <div><input type="text" formControlName="productName"></div>
+    <div><label>Product Price</label></div>
+    <div><input type="text" formControlName="productPrice"></div><br>
+    <div><button class="btn btn-secondary">Update Information</button></div>
+
+
+
+
+</form>
+
+
+
+
+  
+

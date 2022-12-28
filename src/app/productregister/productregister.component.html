@@ -1,0 +1,12 @@
+<h1 align="center">Register Product Information</h1>
+<form [formGroup]="productform" (ngSubmit)="registerproduct()" class="form-group" align="center">
+    <div><label>Product Name</label></div>
+    <div><input type="text" formControlName="productName"></div>
+    <div><label>Product Price</label></div>
+    <div><input type="text" formControlName="productPrice"></div><br>
+    <div><button class="btn btn-secondary">Store Information</button></div>
+
+
+
+
+</form>
